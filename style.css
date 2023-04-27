@@ -1,0 +1,30 @@
+body {
+    background-color: darkslategray;
+}
+
+.menu {
+    text-align: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.search, .trending {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2,  p, label {
+    color: white;
+}
+
+img {
+    padding: 10px;
+    justify-content: center;
+}
