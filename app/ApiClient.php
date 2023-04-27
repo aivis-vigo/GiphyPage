@@ -46,7 +46,7 @@ class ApiClient
         $response = $this->client->get("https://api.giphy.com/v1/gifs/search", [
             'query' => [
                 'api_key' => $_ENV['API_KEY'],
-                'q' => $this->searchFor($name),
+                'q' => $name,
                 'limit' => $perPage
             ]
         ]);
@@ -59,10 +59,5 @@ class ApiClient
             $collected[] = $gif;
         }
         return $collected;
-    }
-
-    private function searchFor(string $name): string
-    {
-        return implode("+", explode(" ", $name));
     }
 }
