@@ -3,6 +3,15 @@
 use Giphy\ApiClient;
 require_once "vendor/autoload.php";
 
+$loader = new Twig\Loader\FilesystemLoader('app/Views');
+$twig = new Twig\Environment($loader);
+echo $twig->render( "view.html.twig", [
+    "pageTitle" => "Giphy",
+    "pageName" => "GIF COLLECTION",
+    "menuTitle" => "Find a GIF you're looking for",
+    "choiceTitle" => "Or check out"
+]);
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 

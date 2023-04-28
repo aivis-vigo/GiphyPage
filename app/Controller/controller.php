@@ -1,7 +1,6 @@
 <?php declare(strict_types=1);
 
 use Giphy\Models\Gif;
-require_once "app/Views/view.php";
 require_once "vendor/autoload.php";
 
 $client = new Giphy\ApiClient();
