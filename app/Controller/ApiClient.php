@@ -1,9 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Giphy;
+namespace Giphy\Controller;
 use GuzzleHttp\Client;
 use Giphy\Models\Gif;
-use GuzzleHttp\Exception\GuzzleException;
 
 class ApiClient
 {
@@ -14,9 +13,6 @@ class ApiClient
         $this->client = new Client();
     }
 
-    /**
-     * @throws GuzzleException
-     */
     public function fetchTrending(): array
     {
         $collected = [];
@@ -37,9 +33,6 @@ class ApiClient
         return $collected;
     }
 
-    /**
-     * @throws GuzzleException
-     */
     public function fetchAll(string $name, int $perPage): array
     {
         $collected = [];
