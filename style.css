@@ -1,5 +1,7 @@
 body {
-    background-color: darkslategray;
+    background-image: linear-gradient(to bottom right, lightgray, brown);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .menu {
@@ -9,6 +11,8 @@ body {
     border-radius: 20px;
     width: 30%;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .search, .trending {
@@ -27,4 +31,14 @@ h1, h2,  p, label {
 img {
     padding: 10px;
     justify-content: center;
+}
+
+input {
+    border-radius: 20px;
+}
+
+.gifs {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
 }
