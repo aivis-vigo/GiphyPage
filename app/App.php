@@ -15,7 +15,7 @@ class App
         $this->gifsController = new GifsController();
     }
 
-    public function run(): array
+    public function run(): void
     {
         $loader = new FilesystemLoader('app/Templates');
         $twig = new Environment($loader);

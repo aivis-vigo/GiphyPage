@@ -9,7 +9,7 @@
     <div class="menu">
         <div class="search">
             <h2>{{ menuTitle }}</h2>
-            <form action="index.php" method="post">
+            <form action="search" method="post">
                 <label for="byName">{{ labelTitle }}</label>
                 <input type="text" id="byName" name="byName" required><br><br>
                 <label for="perPage">{{ labelLimit }}</label>
@@ -21,7 +21,7 @@
         <h2>{{ choiceTitle }}</h2>
 
         <div class="trending">
-            <form action="index.php" method="post">
+            <form action="trending" method="post">
                 <input type="submit" name="trending" value="Trending GIFS"><br><br>
             </form>
         </div>
