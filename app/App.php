@@ -15,13 +15,12 @@ class App
         $this->gifsController = new GifsController();
     }
 
-    public function renderRequested(): void
+    public function run(): array
     {
         $loader = new FilesystemLoader('app/Templates');
         $twig = new Environment($loader);
-        echo $twig->render( "view.html.twig", [
+        echo $twig->render("view.html.twig", [
             "pageTitle" => "Giphy",
-            "pageName" => "GIF COLLECTION",
             "menuTitle" => "Find a GIF you're looking for",
             "choiceTitle" => "Or check out",
             "labelTitle" => "Title: ",
@@ -30,7 +29,7 @@ class App
         ]);
     }
 
-    public function displayGifs(): array
+    private function displayGifs(): array
     {
         if (isset($_POST["search"]) || isset($_POST["trending"])) {
             return $this->gifsController->requested();

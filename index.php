@@ -7,4 +7,4 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $client = new App();
-$response = $client->renderRequested();
+$client->run();
