@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
 namespace Giphy;
+use Giphy\Controller\GifsController;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
-use Giphy\Controller\GifsController;
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 class App
 {
@@ -17,7 +17,7 @@ class App
 
     public function run(): void
     {
-        $loader = new FilesystemLoader('app/Templates');
+        $loader = new FilesystemLoader('../app/Templates');
         $twig = new Environment($loader);
         echo $twig->render("view.html.twig", [
             "pageTitle" => "Giphy",

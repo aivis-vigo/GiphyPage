@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 use Giphy\App;
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
 
 $client = new App();
