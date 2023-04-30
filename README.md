@@ -6,4 +6,4 @@ For project to run you need:
 • composer require guzzlehttp/guzzle
 • composer require "twig/twig:^3.0"
 
-Start website: php -S localhost:8000
+Run website in public directory: php -S localhost:8000
