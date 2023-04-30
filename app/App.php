@@ -1,18 +1,22 @@
 <?php declare(strict_types=1);
 
 namespace Giphy;
+use Giphy\Controller\ApiClient;
 use Giphy\Controller\GifsController;
+use Giphy\Controller\Router;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 require_once "../vendor/autoload.php";
 
 class App
 {
-    private GifsController $gifsController;
+    private Router $router;
+    private GifsController $client;
 
     public function __construct()
     {
-        $this->gifsController = new GifsController();
+        $this->router = new Router();
+        $this->client = new GifsController();
     }
 
     public function run(): void
@@ -32,8 +36,8 @@ class App
     private function displayGifs(): array
     {
         if (isset($_POST["search"]) || isset($_POST["trending"])) {
-            return $this->gifsController->requested();
+            return $this->client->requested();
         }
-        return [];
+        return ($this->router->dispatch() != null) ? $this->router->dispatch() : [];
     }
 }
