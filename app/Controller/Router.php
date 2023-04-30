@@ -3,7 +3,6 @@
 namespace Giphy\Controller;
 use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
-use Giphy\App;
 use function FastRoute\simpleDispatcher;
 require_once "../vendor/autoload.php";
 
@@ -54,8 +53,6 @@ class Router
                         return $this->client->fetchAll(substr($parts[0], 2), (int)$parts[1]);
                     case "trending":
                         return $this->client->fetchTrending();
-                    case null:
-                        return [];
                 }
         }
     }

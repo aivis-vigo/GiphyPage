@@ -1,7 +1,6 @@
 <?php declare(strict_types=1);
 
 namespace Giphy;
-use Giphy\Controller\ApiClient;
 use Giphy\Controller\GifsController;
 use Giphy\Controller\Router;
 use Twig\Environment;
