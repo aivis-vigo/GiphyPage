@@ -1,6 +1,6 @@
 # GiphyPage
 
-For project to run you need:
+For project to run you need:  
 • composer require nikic/fast-route  
 • composer require vlucas/phpdotenv  
 • composer require guzzlehttp/guzzle  
